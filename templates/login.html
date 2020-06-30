@@ -63,17 +63,20 @@
 
     <form action="" method="post">
         {% csrf_token %}
-        <h3 style="font-family:Courier; color:red;">Sign in with your account...</h3>
+        <h4 style="font-family:Courier; color:blue;">Sign in with your account:</h4>
         <hr>
-        User name:
+        
+        <label>Enter User name:</label>
         <input type="text" name="username" placeholder="username"><br>
-        Password :
+       
+        <label>Enter Password:</label>
         <input type="password" name="password" placeholder="password"><br>
+        
         <input type="submit">
         <hr>
     </form>
 
-    <h3 style="font-family:Courier; color:red;">New User ?</h3>
+    <h4 style="font-family:Courier; color:red;">New User ?</h4>
     <a  style="font-family:Courier; color:blue;" href="register">register</a>
 
     <br><br><br>

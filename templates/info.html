@@ -62,10 +62,19 @@
  <a style="font-solid" href="index1">Download PDF</a>
     <form method="POST">
         {% csrf_token %}
-        Student Name: <input type="text" name="student_name"><br/>
-        Supervisor Name: <input type="text" name="supervisor_name"><br/>
-        Thesis Title: <input type="text" name="thesis_title"><br/>
-        Submission Year: <input type="number" name="submission_year"><br/>
+        
+        <label>Enter Student Name:</label>
+        <input type="text" name="student_name"><br/>
+        
+        <label>Enter Supervisor Name:</label>
+        <input type="text" name="supervisor_name"><br/>
+        
+        <label>Enter Thesis Title:</label>
+        <input type="text" name="thesis_title"><br/>
+       
+        <label>Enter Submission Year:</label>
+        <input type="number" name="submission_year"><br/>
+        
         <input type="submit" value="Submit" />
     </form><br/><br/>
     
