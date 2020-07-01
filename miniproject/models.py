@@ -9,6 +9,6 @@ class  Phdtable(models.Model):
     student_name=models.CharField(max_length=100)
     supervisor_name=models.CharField(max_length=100)
     thesis_title=models.CharField(max_length=300)
-    submission_year=models.IntegerField()
+    submission_year=models.CharField(max_length=100)
     department=models.CharField(max_length=100)
     

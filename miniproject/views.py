@@ -85,7 +85,8 @@ def info(request):
     supervisor_name=request.POST.get("supervisor_name")
     thesis_title=request.POST.get("thesis_title")
     submission_year=request.POST.get("submission_year")
-    query=Phdtable.objects.all().filter(Q(student_name=student_name)|Q(supervisor_name=supervisor_name))
+    department=request.POST.get("department")
+    query=Phdtable.objects.all().filter(Q(student_name=student_name)|Q(supervisor_name=supervisor_name)|Q(thesis_title=thesis_title)|Q(submission_year=submission_year)|Q(department=department))
 
     return render(request, 'info.html',{'query': query})
 
