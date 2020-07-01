@@ -74,6 +74,9 @@
        
         <label>Enter Submission Year:</label>
         <input type="number" name="submission_year"><br/>
+
+        <label>Enter Department Name:</label>
+        <input type="text" name="department"><br/>
         
         <input type="submit" value="Submit" />
     </form><br/><br/>
@@ -86,6 +89,7 @@
           <th>Title of Thesis</th>
           <th>Name of Supervisor</th>
           <th>Year of Submission</th>
+          <th>Department Name</th>
         </tr>
     {% for det in query %}
              <tr>
@@ -94,6 +98,7 @@
           <td>{{det.thesis_title}}</td>
           <td>{{det.supervisor_name}}</td>
           <td>{{det.submission_year}}</td>
+          <td>{{det.department}}</td>
           
         </tr>
      

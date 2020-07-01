@@ -32,6 +32,7 @@ def register(request):
         username=request.POST['username']
         #branch=request.POST['branch']
         #branch.POST.get('branch', NULL)
+        #department=request.POST['department']
         email=request.POST['email']
         password1=request.POST['password1']
         password2=request.POST['password2']
@@ -67,8 +68,9 @@ def thesis(request):
     supervisor_name=request.POST.get("supervisor_name")
     thesis_title=request.POST.get("thesis_title")
     submission_year=request.POST.get("submission_year")
+    department=request.POST.get("department")
 
-    thesis_obj=Phdtable(student_name=student_name,supervisor_name=supervisor_name,thesis_title=thesis_title,submission_year=submission_year)
+    thesis_obj=Phdtable(student_name=student_name,supervisor_name=supervisor_name,thesis_title=thesis_title,submission_year=submission_year,department=department)
     thesis_obj.save()
     
     return render(request,'register.html')
